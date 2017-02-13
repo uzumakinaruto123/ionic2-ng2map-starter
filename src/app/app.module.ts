@@ -5,6 +5,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { Ng2MapModule} from 'ng2-map';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     TabsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    Ng2MapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js'})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
